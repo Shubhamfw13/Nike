@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        body{
+            margin:0;
+        }
+
+        #sale_topbar
+        {
+            height:50px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0% 4% 2% 4%;
+            font-size: 20px;
+        }
+
+        #sale_topbar > div
+        {
+            display: flex;
+        }
+
+        #sale_head{
+            transform: translateY(8px);
+        }
+
+        #sale_filter_sort
+        {
+            justify-content: space-between;
+            width:320px;
+            height:60px;
+        }
+        #filter_sec
+        {
+            display: flex;
+            padding-top: 4px;
+        }
+
+        #filter_sec >img{
+            width:25px;
+            height:25px;
+            transform: translate(5px,23px);
+            cursor:pointer;
+        }
+
+        #sort_by
+        {
+            transform: translate(10px,6px);
+        }
+
+        #sort_arrow
+        {
+            width:20px;
+            height:25px;
+            transform: translateY(30px) rotate(90deg);
+            cursor:pointer;
+        }
+
+        #sale_sorting_list
+        {
+            margin-left:84%;
+            position:absolute;
+            font-size: 20px;
+            height:80px;
+            transform: translateY(-20px);
+            text-align: center;  
+        }
+
+        #sale_sorting_list > h6
+        {
+            line-height: 2px;
+            cursor: pointer;
+        }
+
+        #sale_sorting_list + div
+        {
+            display:flex;
+        }
+
+        #sale_products{
+            width:95%;
+            display: grid;
+            grid-template-columns: repeat(3,32%);
+            grid-template-rows: repeat(7,450px);
+            justify-content: space-around;
+            grid-row-gap: 1%;
+            margin:auto;
+            margin-bottom:18%;
+        }
+
+        #sale_products > div{
+            /* height:450px; */
+            box-shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 13%), 0 0.3px 0.9px 0 rgb(0 0 0 / 11%);
+        }
+        #image_box{
+            height:73%;
+        }
+
+        #image_box > img{
+            width:100%;
+            height:100%;
+        }
+
+        #content_box
+        {
+            line-height: 0;
+            margin-left: 1%;
+        }
+
+        #content_box > p
+        {
+            line-height: 12px;
+            color:grey;
+            
+        }
+
+        #content_box > p:nth-child(3)
+        {
+            color:black;
+        }
+        
+
+    </style>
+</head>
+<body>
+        <div id = "sale_topbar">
+            <div>
+                <p id = "sale_head"> Sale</p>
+            </div>
+            <div id = "sale_filter_sort"> 
+              <div id = "filter_sec">
+                <p>Show Filters</p>
+                    <img id = "filter" src="https://cdn.iconscout.com/icon/free/png-64/filter-3583346-3007732.png" alt="">
+              </div>
+            
+                <p id = "sort_by">Sort By:
+                <div id = "sort_arrow">&#x276D;</div>
+                </p>
+          </div>
+        </div>
+        <div id = "sale_sorting_list"></div>
+        <div>
+            <div id = "filter_corner"></div>
+            <div id = "sale_products"></div>
+        </div>
+        <div id = "customise_footer"></div>  
+</body>
+</html>
+<script type ="module">
+
+    let products = JSON.parse(localStorage.getItem("sales_products"))||[]; // getting data from local Storage
+
+    // IMPORT FUNCTION
+    import {getdata,filter_cat} from './sales.js'
+    import setdata from './nike_sale_data.js' 
+
+    setdata() // calling setdata to store the details to the local storage 
+
+   let product =  document.querySelector('#sale_products') // gettin element from HTML
+
+    getdata(products,product) // adding parameter to imported funtion get data(data,location)
+
+    sort_price() // calling sort_price to open sort section
+
+    function sort_price() // SORT SECTION
+    {   
+        document.querySelector("#sort_arrow").addEventListener("click",() => // event listner
+        {
+            event.target.style.transform = "translate(-7px,25px) rotate(270deg)" // making arrow upwards
+
+            document.querySelector("#sale_sorting_list").innerHTML = ""; // content inside sort section
+            let low = document.createElement("h6")
+            low.textContent = "Price: Low to High";
+            let high = document.createElement("h6")
+            high.textContent = "Price: High to Low";
+            
+            document.querySelector("#sale_sorting_list").append(low,high)
+            
+            document.querySelector("#sale_sorting_list").style.cssText =  // styles to sort body
+            `background:white;
+            width:130px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);`;
+        
+
+            document.querySelector("#sale_sorting_list").addEventListener("click",() => // event listner to sort body
+            {
+                
+                products.sort(function(a,b){ //  sort funtion upon clicking 
+                    
+                    if(event.target.textContent == low.textContent) // if clicked low to high text
+                    {
+                        return Number(a.price) - Number(b.price)
+            
+                    }
+                    else if(event.target.textContent == high.textContent) // if clicked on high to low
+                    { 
+                        let num = Number(a.price)
+                        return Number(b.price) - Number(a.price)
+                    }
+                })
+                getdata(products,product) // adding sorted data as parameter 
+
+            })
+
+            document.querySelector("#sort_arrow").addEventListener("click",() => // make arrow downwards upon clicking second time
+            {
+                event.target.style.transform = "translateY(30px) rotate(90deg)";
+                document.querySelector("#sale_sorting_list").style.display = "none"; // not displaying
+                sort_price()
+            })
+        })
+    } 
+    
+    filter_it()
+
+    function filter_it() //FILTER SECTION
+    {
+        document.querySelector("#filter").addEventListener("click",() =>
+        {
+            document.querySelector("#filter_sec > p").textContent = "Hide Filters";
+            document.querySelector("#sale_products").style.width = "80%"
+
+            let filter_box = document.querySelector("#filter_corner")
+
+            filter_box.style.cssText = 
+            `width:15%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            height:290px;
+            text-align:center;`;
+            
+            let category = document.createElement("h4")
+            category.textContent = "Categories";
+
+            let categories = document.createElement("div")
+        
+            filter_box.append(category)
+
+            filter_cat(products,filter_box,categories,"Men")
+            filter_cat(products,filter_box,categories,"Women")
+            filter_cat(products,filter_box,categories,"Kids")
+            filter_cat(products,filter_box,categories,"Shoes")
+            filter_cat(products,filter_box,categories,"Shirts")
+
+            document.querySelector("#filter").addEventListener("click",() =>
+            {
+                document.querySelector("#filter_sec > p").textContent = "Show Filters";
+                filter_box.style.display = "none";
+                document.querySelector("#sale_products").style.width = "95%";
+                filter_box.innerHTML = "";
+                filter_it()
+                
+            })
+        })
+    }  
+
+    // FOOTER Section
+    
+    import footer from "./footer.js"
+
+    let footer_styles = footer()
+    document.querySelector("#customise_footer").innerHTML = footer_styles
+</script>

@@ -1,7 +1,7 @@
 #tara_image,
 #the_latest {
-  width: 90%;
-  height: 400px;
+  width: 94%;
+  height: 600px;
   margin: auto;
 }
 
@@ -16,36 +16,37 @@
   text-align: center;
   height: 200px;
   margin: 2% auto;
+  margin-bottom: 6%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #training_ess > p:first-child {
-  font-size: 11px;
+  font-size: 16px;
 }
 #training_ess > p:nth-child(2) {
-  font-size: 28px;
+  font-size: 43px;
   font-weight: bolder;
   margin: -8px 0 0px 0px;
   transform: scale(1.2);
 }
 
 #training_ess > p:nth-child(3) {
-  font-size: 8px;
+  font-size: 15px;
   margin: 5% 0;
 }
 
 #training_ess > div {
   display: flex;
-  margin-left: 22%;
+  margin-left: 24%;
 }
 
 #training_ess > div > button {
-  width: 140px;
-  height: 28px;
+  width: 210px;
+  height: 37px;
   border-radius: 20px;
   border: none;
   color: white;
-  font-size: 10px;
+  font-size: 15px;
   background-color: black;
 }
 #training_ess > div > button:hover,
@@ -54,18 +55,18 @@
 }
 
 #training_ess > div > div {
-  margin-left: 4%;
-  width: 100px;
-  height: 28px;
+  margin-left: 2%;
+  width: 120px;
+  height: 37px;
   box-sizing: border-box;
   background-color: black;
   color: white;
-  font-size: 10px;
-  padding: 2%;
+  font-size: 15px;
+  padding: 1.8%;
   border-radius: 20px;
 }
 
 #the_latest > p {
-  font-size: 14px;
-  margin-bottom: 0;
+  font-size: 18px;
+  margin-bottom: 1%;
 }
