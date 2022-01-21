@@ -175,6 +175,86 @@ var data = [
   },
 ];
 
+
+
+
+var data2 = [
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DA8016_806_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Women's Air Jordan 5 Low",
+    name:"Girls That Hoop"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DH2973_200_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Air Max Terrascape 90",
+    name:"Fuel Orange"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/555088_404_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Air Jordan 1",
+    name:"Dark Marina Blue"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/575441_404_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Air Jordan 1",
+    name:"Dark Marina Blue"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DQ8581_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Women's Dunk High",
+    name:"Vintage Black"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DQ8580_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Women's Dunk Low",
+    name:"Vintage Green"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DQ9324_600_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Women's Dunk Low ",
+    name:"Prime Pink"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DM1297_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Air More Uptempo '96",
+    name:"Trading Cards"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DH5348_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Dunk High",
+    name:"Light Chocolate"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DH0953_400_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Dunk High EMB",
+    name:"College Navy"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DO3806_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Older Kid's Dunk Low",
+    name:"Halloween"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DQ8580_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Women's Dunk Low",
+    name:"Vintage Green"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DQ8581_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Women's Dunk High",
+    name:"Vintage Black"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/555088_404_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Air Jordan 1",
+    name:"Dark Marina Blue"
+  },
+]
+
+
+
+
+
 const Feed = () => {
   for (var i = 0; i < 15; i++) {
     let feeddiv = document.createElement("div");
@@ -185,21 +265,30 @@ const Feed = () => {
 
     let categ = document.createElement("p");
     categ.innerHTML = data[i].category;
-    categ.setAttribute = ("class","categ")
+    categ.setAttribute("class","categ")
 
     let nam = document.createElement("p");
     nam.innerHTML = data[i].name;
-    nam.setAttribute = ("class","nam")
+    nam.setAttribute("class","nam")
+
+    nam.setAttribute("id","nm"+i)
 
     let comingsoonbut = document.createElement("button")
-    comingsoonbut.setAttribute = ("class","comingsoonbutton")
-    comingsoonbut.innerHTML = "Coming Soon"
+    comingsoonbut.setAttribute("class","comingsoonbutton")
+    comingsoonbut.setAttribute("id","butt"+i)
+    comingsoonbut.innerHTML = "Buy"
+    
+    nam.addEventListener("mouseover",function(){
+      but()
+    })
 
     feeddiv.append(imag, categ, nam,comingsoonbut);
 
     document.getElementById("feed-main").append(feeddiv);
     
   }
+ 
+ 
 };
 
 const inStock = () => {
@@ -215,13 +304,43 @@ const inStock = () => {
   });
 };
 
-// function but(){
-//   document.querySelector(".feeddiv").addEventListener("click",function(){
-//     document.querySelector(".categ").style.display="none"
-//     document.querySelector(".nam").style.display="none"
-//     document.querySelector(".comingsoonbutton").style.display="block"
-//   })
-// }
+function but(){
+  // document.querySelector(".feeddiv").addEventListener("mouseover",function(){
+    document.querySelector(".categ").style.display="none"
+    document.querySelector(".nam").style.display="none"
+    document.querySelector(".comingsoonbutton").style.display="block"
+  // })
+}
+
+const upcomingProd = () => {
+  for (var i = 0; i < 15; i++) {
+    let feeddiv = document.createElement("div");
+    feeddiv.setAttribute("class", "feeddiv");
+
+    let imag = document.createElement("img");
+    imag.src = data2[i].image;
+
+    let categ = document.createElement("p");
+    categ.innerHTML = data2[i].category;
+    categ.setAttribute("class","categ")
+
+    let nam = document.createElement("p");
+    nam.innerHTML = data2[i].name;
+    nam.setAttribute("class","nam")
+
+    let comingsoonbut = document.createElement("button")
+    comingsoonbut.setAttribute("class","comingsoonbutton")
+    comingsoonbut.innerHTML = "Coming Soon"
+
+    feeddiv.append(imag, categ, nam,comingsoonbut);
+
+    document.getElementById("feed-main").append(feeddiv);
+   
+    
+  }
+ 
+};
+
 
 
 function InStockPage() {
