@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #lebron-div {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      #lebron-div > div:nth-child(1) {
+        text-align: center;
+      }
+      #lebron-div > div > span:nth-child(1) {
+        font-weight: 900;
+        font-size: 60px;
+      }
+      #black-but{
+        height: 40px;
+        width: 90px;
+        background-color: black;
+        color: white;
+        display: block;
+        border: none;
+        border-radius: 40px;
+        font-size: 15px;
+        margin-left: 47.5%;
+        
+      }
+      #black-but:hover{
+          background-color: rgba(0, 0, 0, 0.719);
+          transition: 0.5s;
+          cursor: pointer;
+      }
+      #parent-lebron {
+        width: 94%;
+        margin: auto;
+        height: 650px;
+      }
+      #lebron-dontmiss {
+        display: flex;
+        height: 100%;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      #lebron-dontmiss > div:nth-child(1) {
+        /* border: 4px solid red; */
+        width: 50%;
+        background-repeat: no-repeat;
+        background-image: url("https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_900,c_limit/6953060d-024b-4471-b7d8-dbebbaa48a8e/nike-just-do-it.png");
+        background-size: 800px 700px;
+        object-fit: cover;
+      }
+      #lebron-dontmiss > div:nth-child(2) {
+        /* border: 2px solid; */
+        width: 50%;
+        background-repeat: no-repeat;
+        background-image: url("https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_900,c_limit/4a8e050c-88f9-4ef5-9056-221aac86dc66/nike-just-do-it.jpg");
+        background-size: 800px 700px;
+        object-fit: cover;
+      }
+      #lebron-dontmiss > div > p {
+        color: white;
+        padding-top: 63.5%;
+        padding-left: 20px;
+      }
+      #white-but{
+        height: 40px;
+        width: 90px;
+        background-color: white;
+        color: black;
+        display: block;
+        border: none;
+        border-radius: 40px;
+        font-size: 15px;
+        margin-left: 20px;
+        
+      }
+      #white-but:hover{
+          background-color:rgba(248, 248, 248, 0.555);
+          transition: 0.5s;
+          cursor: pointer;
+      }
+      /* #parent- */
+    </style>
+  </head>
+  <body>
+    <div id="lebron-div">
+      <div>
+        <span>THE LEBRON XIX</span>
+        <p>Step into LeBron's world where there's always space to dominate.</p>
+        <button id="black-but">Shop</button>
+      </div>
+      <div id="parent-lebron">
+        <p>Dont Miss</p>
+        <div id="lebron-dontmiss">
+          <div>
+            <p>Blazer Low '77 Jumbo Just Dropped</p>
+            <button id="white-but">Shop</button>
+          </div>
+          <div>
+            <p>Recharge With Colour</p>
+            <button id="white-but" >Shop</button>
+          </div>
+        </div>
+        <div><p>Trending</p><img width="100%" src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1792,c_limit/ab92247e-c102-4cf6-8817-c06139e9a142/nike-just-do-it.jpg" alt=""></div>
+      </div>
+    </div>
+  </body>
+</html>

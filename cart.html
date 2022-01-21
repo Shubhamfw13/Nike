@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #cart-main {
+        display: flex;
+        height: 300px;
+        /* border: 2px solid red; */
+        width: 60%;
+        margin: auto;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin-top: 8%;
+      }
+      #cart-div {
+        width: 60%;
+        /* border: 2px solid green; */
+      }
+      #cart-div>p:nth-child(1){
+          font-size: x-large;
+      }
+      #cart-summary {
+        width: 40%;
+        /* border: 2px solid rgb(101, 202, 76); */
+      }
+      #cart-summary>p:nth-child(1){
+        font-size: x-large;
+      }
+      #cart-items {
+        display: flex;
+      }
+      #cart-items > div:nth-child(1) {
+        /* border: 2px solid black; */
+        width: 30%;
+      }
+      #cart-items > div:nth-child(1) > img {
+        width: 100%;
+        height: 100%;
+      }
+      #cart-items > div:nth-child(2) {
+        /* border: 2px solid rgb(21, 201, 162); */
+        width: 50%;
+        padding-left: 20px;
+      }
+      #cart-items > div:nth-child(3) {
+        /* border: 2px solid rgb(119, 117, 214); */
+        width: 20%;
+      }
+      #cart-total {
+        display: flex;
+      }
+      #cart-total>div:nth-child(2){
+          padding-left:30px; 
+      }
+      #cart-checkout>button{
+          border: none;
+          height: 60px;
+          width: 70%;
+          background-color: black;
+          color: white;
+          border-radius: 30px;
+          cursor: pointer;
+      }
+      #cart-checkout>button:hover{
+          background-color: rgba(0, 0, 0, 0.733);
+          transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cart-main">
+      <div id="cart-div">
+        <p>Bag</p>
+        <div id="cart-items">
+          <div>
+            <img
+              src="https://images.nike.com/is/image/DotCom/DH9719_100_A_PREM?align=0,1&cropN=0,0,0,0&resMode=sharp&bgc=f5f5f5&wid=150&fmt=jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <p>Nike Air More Uptempo</p>
+            <p>Older Kids' Shoes</p>
+            <p>Size</p>
+            <p>Quantity</p>
+            <p>Move to Favorites</p>
+            <p>Remove</p>
+          </div>
+          <div><p>Price</p></div>
+        </div>
+      </div>
+      <div id="cart-summary">
+        <p>Summary</p>
+        <div id="cart-total">
+          <div>
+            <p>Subtotal</p>
+            <p>Estimated Delivery & Handling</p>
+            <hr />
+            <p>Total</p>
+            <hr />
+          </div>
+          <div>
+            <p>9999</p>
+            <p>9999</p>
+            <hr />
+            <p>9999999</p>
+            <hr />
+          </div>
+        </div>
+        <div id="cart-checkout">
+          <button>Checkout</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
