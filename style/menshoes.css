@@ -1,0 +1,21 @@
+#men_shoes_container{
+    display: grid;
+    grid-template-columns: repeat(3,25%);
+    grid-gap: 3%;
+    /* border: 1px solid red; */
+    width: 100%;
+    margin-left: 10%;
+    margin-top: 3%;
+    
+}
+#men_shoes_container > div{
+    cursor: pointer;
+    /* border: 1px solid red; */
+    align-items: center;
+}
+img{
+    height: 500px;
+}
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
