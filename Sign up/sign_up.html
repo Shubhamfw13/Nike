@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="./sign_up.css">
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <div id = "signup_box">
+        <div>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fdownload%2Fblack%2Fnike-512.jpg&f=1&nofb=1" alt="">
+        </div>
+        <h3>BECOME A NIKE MEMBER</h3>
+        <div>
+            <p>Create your Nike Member profile and get first
+                access to the very best of Nike products, inspiration
+                and community.</p>
+        </div>
+        <div class = "form">
+            <form action="" id ="signup_form">
+                <input type="email" id = "email" placeholder="Email address" autofocus  required minlength="5">
+                <input type="password" id = "password" placeholder="Password" required minlength="3">
+                <input type="text" id = "first" placeholder="First Name" required minlength="1">
+                <input type="text" id = "last" placeholder="Last Name" required minlength="1">
+                <input type="text" id = "birth" placeholder="Date of Birth" onfocus="(this.type='date')" required>
+                <label for="">Get Nike Member Reward every year on your Birthday.</label>
+                <input type="text" id="country" value="India">
+                <div class = "gender">
+                    <div id = "male">Male</div>
+                    <div id = "female">Female</div>
+                </div>
+                <div id = "tick_box">
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <p>Sign up fo emails to get updates from Nike on
+                            products,offer and your Member benefits
+                        </p>
+                    </div>
+                    <p>By Creating an account, you agree to Nike's <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&country=IN&language=en&mobileStatus=false&requestType=redirect&uxId=com.nike.commerce.nikedotcom.web">Privacy Policy</a>
+                        and 
+                        <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&country=IN&language=en&mobileStatus=true&requestType=redirect&uxId=com.nike.commerce.nikedotcom.web">Terms of Use.</a></p>
+                </div>
+                <button id = "join_us">JOIN US</button>
+                <p>Already a Member?<a href="/Sign In/sign_in.html">Sign In.</a></p>
+            </form>
+        </div>
+    </div>
+    <div id = "customise_footer"></div>  
+</body>
+</html>
+<script src="./sign_up.js"> </script>
+<script type = "module">
+
+import footer from "/footer.js"
+
+let footer_styles = footer()
+document.querySelector("#customise_footer").innerHTML = footer_styles  
+
+</script>

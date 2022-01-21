@@ -37,19 +37,27 @@
 }
 
 #customise_footer_icon {
-  width: 18%;
+  width: 16%;
   height: 50px;
   margin-left: 25%;
+  transform: translateX(60px);
+  display: flex;
 }
 
-#customise_footer_icon > button {
+#customise_footer_icon > a {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: none;
+  box-sizing: border-box;
+  outline: none;
   margin: 0 4%;
+  background-color: rgb(119, 118, 118);
 }
-#customise_footer_icon > button > img {
+#customise_footer_icon > a :hover {
+  background-color: white;
+}
+
+#customise_footer_icon > a > img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -120,13 +128,16 @@
 
   #customise_footer_icon {
     width: 23%;
+    display: flex;
+    flex-wrap: wrap;
     height: 100px;
     margin-left: 2%;
-    text-align: right;
     margin-right: 2%;
+    justify-content: end;
+    transform: translateX(0);
   }
 
-  #customise_footer_icon > button {
+  #customise_footer_icon > a {
     width: 35px;
     height: 35px;
   }
@@ -135,7 +146,6 @@
     width: 96%;
     justify-content: space-between;
     height: 70px;
-    border: 1px solid red;
   }
 
   #footer_location {
@@ -197,13 +207,14 @@
     height: 40px;
     margin-top: 3%;
     margin-left: -1%;
+    transform: translateX(0);
   }
 
-  #customise_footer_icon > button {
+  #customise_footer_icon > a {
     margin: 0 5% 0 0;
     border: none;
   }
-  #customise_footer_icon > button > img {
+  #customise_footer_icon > a > img {
     border-radius: 50%;
     width: 100%;
     height: 100%;

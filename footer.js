@@ -26,18 +26,11 @@ function footer()
         <p>Sustainability</p>
     </div>
     <div id = "customise_footer_icon">
-        <button>
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.KCOMqyxNd-Ph8uAwUHJ9ZwHaHa%26pid%3DApi&f=1" alt="">
-        </button>
-        <button>
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.qAvEb6dwa1l715giSS_qBAHaHa%26pid%3DApi&f=1" alt="">
-        </button>
-        <button>
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.NXMmTT3UNjAYCL1dJNchaAAAAA%26pid%3DApi&f=1" alt="">
-        </button>
-        <button>
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.aXzo-kxm-dVvhZ3DF5050QHaHa%26pid%3DApi&f=1" alt="">
-        </button>
+        <a href="https://twitter.com/Nike"><img src="https://img.icons8.com/material/2x/twitter-squared.png"></a>
+        <a href="https://www.facebook.com/nike"><img src="https://cdn-icons.flaticon.com/png/512/3128/premium/3128208.png?token=exp=1642782321~hmac=b6c16c3c46cb17a94f8cd5d7277c914a"></a> 
+        <a href="https://www.youtube.com/user/nike"><img src="https://img.icons8.com/material/2x/youtube--v1.png"></a>
+        <a href="https://instagram.com/nike"><img src="https://img.icons8.com/windows/2x/instagram.png"></a>
+
     </div>
 </div>
 

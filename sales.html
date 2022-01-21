@@ -253,7 +253,6 @@
                 document.querySelector("#sale_products").style.width = "95%";
                 filter_box.innerHTML = "";
                 filter_it()
-                
             })
         })
     }  
@@ -264,4 +263,27 @@
 
     let footer_styles = footer()
     document.querySelector("#customise_footer").innerHTML = footer_styles
+
+
+    // Product Show Page on click
+
+    let item = document.querySelector("#product_box")
+
+    item.addEventListener("click",(event) => {
+        var obj = {
+            titleprod: prodtitle,
+            imageprod: prodimg,
+            desprod: proddes,
+            catprod: prodcat,
+            priceprod: prodprice
+        };
+
+        var localobj = JSON.parse(localStorage.getItem("product"));
+
+        console.log(obj);
+
+        localStorage.setItem("product", JSON.stringify(obj));
+
+        window.location.href = "product_show.html";
+    });
 </script>

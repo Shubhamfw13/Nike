@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership</title>
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="./join_us.css">
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div id = "membership">
+        <p>Nike Membership</p>
+    </div>
+    <div id = "join_us">
+        <img src="https://i2.paste.pics/4812ed74a9a53f53b83c4e930f925917.png?trs=2218877daff98d7db84b885b54f3c3afd8bd8e45259e7205630d3234042c601f" alt="">
+    </div>
+    <div id = "join_us_content">
+        <div>Where All Athletes Belong</div>
+        <p>Trying something new is never pretty. But it is pretty awesome.
+            Because no matter how many times you fall down, you're still coming out
+            on top. Trying new things is always a win.
+        </p>
+        <p>
+            Join the Nike community as we Play New. As a Member, you'll
+            have access to inspiration, the latest Nike products and a community
+            of people who are trying something new, just like you.
+        </p>
+        <div id = "join_in">
+            <button class = "join_us_click">Join Us</button>
+            <button class = "sign_in_click">Sign In</button>
+        </div>
+    </div>
+
+    <div class = "nike_image">
+        <p>Don't Miss</p>
+        <img src="https://i2.paste.pics/8929feae10cce8197d29324646f493b1.png?trs=2218877daff98d7db84b885b54f3c3afd8bd8e45259e7205630d3234042c601f" alt="">
+    </div>
+    <div id = "hello_app_content">
+        <h1>YOUR NIKE CONNECTION</h1>
+        <P>More sport, more inspiration, more Nike!</P>
+        <button>Get Your Great</button>
+    </div>
+    <div class = "nike_image">
+        <p>First Access</p>
+        <img src="https://i2.paste.pics/2fa26b5b6f3e09b200577e045ce45089.png?trs=2218877daff98d7db84b885b54f3c3afd8bd8e45259e7205630d3234042c601f" alt="">
+    </div>
+    <div class = "nike_image">
+        <p>Member Rewards</p>
+        <img src="https://i2.paste.pics/d5a9489b22721fbae5fbcd30c5b635ec.png?trs=2218877daff98d7db84b885b54f3c3afd8bd8e45259e7205630d3234042c601f" alt="">
+    </div>
+    <div class = "nike_image">
+        <p>Shopping As It Should Be</p>
+        <img src="https://i2.paste.pics/97c8fa85a4d2c81771a9777e84e3a325.png?trs=2218877daff98d7db84b885b54f3c3afd8bd8e45259e7205630d3234042c601f" alt="">
+    </div>
+    <div id = "athletes">
+        <img src="https://i2.paste.pics/b3150c79ffddcac90bf55092b2afa7cb.png?trs=2218877daff98d7db84b885b54f3c3afd8bd8e45259e7205630d3234042c601f" alt="">
+        <div>
+            <button class = "join_us_click" >Join Us</button>
+            <button class = "sign_in_click" >Sign-In</button>
+        </div>
+    </div>
+    <div id = "customise_footer"></div>  
+</body>
+</html>
+
+<script type = "module">
+
+    import footer from "/footer.js"
+
+    let footer_styles = footer()
+    document.querySelector("#customise_footer").innerHTML = footer_styles
+
+
+    document.querySelectorAll(".join_us_click")[0].addEventListener("click",() =>
+    {
+        window.location.href = "/Sign up/sign_up.html"
+    })
+    document.querySelectorAll(".sign_in_click")[0].addEventListener("click",() =>
+    {
+        window.location.href = "/Sign In/sign_in.html"
+    })
+    document.querySelectorAll(".join_us_click")[1].addEventListener("click",() =>
+    {
+        window.location.href = "/Sign up/sign_up.html"
+    })
+    document.querySelectorAll(".sign_in_click")[1].addEventListener("click",() =>
+    {
+        window.location.href = "/Sign In/sign_in.html"
+    })
+
+</script>

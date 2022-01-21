@@ -4,6 +4,7 @@ function getdata(product,location)
     product.forEach(elem => {
             
         let product = document.createElement("div")
+        product.setAttribute("id","product_box")
 
         let image_box = document.createElement("div")
         image_box.setAttribute("id","image_box")
