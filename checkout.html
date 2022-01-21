@@ -4,16 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
+    <link rel="stylesheet" href="./style/checkout.css">
     <title>Nike.com Checkout</title>
 </head>
 <body>
     <div id="checkot_main_container_div">
         <div id="checkout_main_proccess_div">
-            <h1></h1>
-            <div id="checkout_adress_div"></div>
-            <h1></h1>
+            <h1>1. DELIVERY DETAILS</h1>
+            <div id="checkout_adress_div">
+                <div id="checkout_name">
+                    <input type="text" placeholder="First Name" id="userfirstname">
+                    <input type="text" placeholder="Last Name" id="userlastname">
+                </div>
+                <input type="text" placeholder="Enter Address" id="useraddress">
+                <div id="checkout_email_phnnumber">
+                    <input type="email" placeholder="" id="useremail">
+                    <input type="number" placeholder="" id="userphnnum">
+                </div>
+                <div id="checkout_add_details_button_div">
+                    <button id="checkout_add_details_button" onclick="addDetails()">Save & Countinue</button>
+                </div>
+            </div>
+            <h1>2. PAYMENT</h1>
             <div id="checkout_payment_div"></div>
-            <h1></h1>
+            <h1>3. ORDER REVIEW</h1>
             <div id="checkout_order_status_div"></div>
         </div>
         <div id="checkout_main_amount_div"></div>

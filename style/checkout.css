@@ -2,4 +2,33 @@
     width: 80%;
     margin: auto;
     display: flex;
+    gap: 20px;
+}
+
+h1{
+    color: white;
+    background-color: black;
+    font-size: xx-large;
+    margin-bottom: 0px;
+}
+
+#checkout_main_proccess_div{
+    width: 70%;
+    border: 1px solid blue;
+}
+
+#checkout_adress_div{
+    border-left: 1px solid rgb(95, 95, 95);
+    border-right:  1px solid rgb(95, 95, 95);
+    border-bottom:  1px solid rgb(95, 95, 95);
+    margin: 0;
+}
+
+#checkout_name{
+    display: flex;
+}
+
+#checkout_main_amount_div{
+    width: 30%;
+    border: 1px solid red;
 }
