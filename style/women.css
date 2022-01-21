@@ -6,6 +6,8 @@
 }
 
 #women_upper_sticky_div{
+    width: 98%;
+    margin: auto;
     display: flex;
     position: sticky;
     top: 0;

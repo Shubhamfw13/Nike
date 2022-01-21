@@ -165,6 +165,8 @@
                     console.log(obj);
 
                     localStorage.setItem("product", JSON.stringify(obj));
+
+                    window.location.href = "product_show.html";
                 });
                     
                     var image  = document.createElement("img");
@@ -176,7 +178,7 @@
                         title.style.marginLeft = "10px";
 
                     var price = document.createElement("p");
-                        price.innerText = "₹"+prodprice;
+                        price.innerText = "₹ "+prodprice;
                         price.style.marginLeft = "10px";
 
                     div.append(image, title, price);
