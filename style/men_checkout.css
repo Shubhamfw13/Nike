@@ -1,0 +1,24 @@
+#showData{
+   border: 1px solid red;
+   display: flex;
+  
+}
+#imagecont{
+    border: 1px solid red;
+    width: 35%;
+    margin-left: 20%;
+}
+#textcont{
+    border: 1px solid red;
+    width: 25%;
+}
+.addtobag{
+    background-color: black;
+    color: white;
+    display: block;
+    padding: 20px 45px;
+    font-size: 18px;
+    border-radius: 15%;
+    border: none;
+    margin-top: 2%;
+    }

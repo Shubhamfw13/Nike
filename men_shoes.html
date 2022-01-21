@@ -167,7 +167,7 @@ showdata(data)
 function showdata(data){
     var b = document.getElementById("men_shoes_container");
 
-    data.map(({prodname,prodimage,prodcat,prodprice})=>{
+    data.map(({prodname,prodimage,prodcat,porddes,prodprice})=>{
         var div = document.createElement("div");
 
         div.addEventListener("click",function(event){
@@ -176,18 +176,23 @@ function showdata(data){
                       productimage:prodimage,
                       productname:prodname,
                       productcat:prodcat,
+                      proddes:porddes,
                       productprice:prodprice
 
             };
 
+
+
             console.log(obj);
             localStorage.setItem("product",JSON.stringify(obj))
+            window.location.href = "men_shoes_checkout.html"
         });
         var image = document.createElement("img");
         image.src = prodimage;
         var name = document.createElement("p")
         name.innerHTML = prodname;
         var category = document.createElement("p")
+        category.setAttribute("class","cat")
         category.innerHTML = prodcat;
         var price = document.createElement("p");
         price.innerHTML= prodprice;
