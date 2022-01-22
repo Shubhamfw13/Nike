@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/productshowcase.css">
+    <style>
+        #Product_show_main_div{
+            width: 80%;
+            margin: auto;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="Product_show_main_div"></div>
+</body>
+</html>
+
+<script>
+    var product = JSON.parse(localStorage.getItem("product"));
+ console.log(product)
+    showProduct(product);
+
+    function showProduct({productimage,productname,productcat,proddes,productprice}){
+        var body= document.querySelector("#Product_show_main_div");
+            body.innerHTML = null;
+
+        var image = document.createElement("img");
+            image.setAttribute("src", productimage);
+            image.style.width = "70%";
+
+        var div = document.createElement("div");
+
+        var title = document.createElement("h1");
+            title.innerText = productname;
+
+        var price = document.createElement("h3");
+            price.innerText = productprice;
+
+        var cart = document.createElement("button");
+            cart.textContent = "Add to cart";
+            cart.addEventListener("click", function(event){
+                event.preventDefault();
+                var obj = {
+                    prodtitle: prodname,
+                    prodcat: prodcat,
+                    proddes: proddes,
+                    prodimg: prodimage,
+                    prodprice: prodprice,
+                }
+                cart_data.push(obj);
+                localStorage.setItem("cart", JSON.stringify(cart_data));
+            })
+
+        var wishlist = document.createElement("button");
+            wishlist.textContent = "Favourite";
+            wishlist.addEventListener("click", function(event){
+                event.preventDefault();
+                var obj = {
+                    prodtitle: prodname,
+                    prodcat: prodcat,
+                    proddes: proddes,
+                    prodimg: prodimage,
+                    prodprice: prodprice,
+                }
+                wishlist_data.push(obj);
+                localStorage.setItem("wishlist", JSON.stringify(wishlist_data));
+            })
+
+        var br = document.createElement("br")
+            
+
+        var description = document.createElement("p");
+            description.innerText = proddes;
+
+        div.append(title, price, cart, br, wishlist, description);
+
+        body.append(image, div);
+    }
+
+    var cart_data = JSON.parse*(localStorage.getItem("cart")) || [];
+
+    var wishlist_data = localStorage.getItem("wishlist");
+</script>
