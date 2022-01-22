@@ -139,11 +139,55 @@ function setdata()
                         falls at your hips for a carefree look that's both fun and functional.`
     let clash = new nike_sale_products(clash_url,"Nike Sportwear Icon Clash","Women's Shirts",2797,clash_desc)
 
-    let products = [lebron, Waffle,paris,tiempo,trophy,crator,sportwear,offcourt,revolution,legend,
-                    legacy,jordan,academy, giannis,white_sportwear,sunray,air,phantom,max90,clash]
+    let force_url = "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4443e39d-c7b3-41b2-a4db-3029454c7e57/air-force-1-07-essential-shoes-4DfNJF.png"
+    let force_desc = `The radiance lives on in the Nike Air Force 1 '07, the b-ball icon that puts a fresh spin 
+                    on what you know best: stitched overlays, bold details and the perfect amount of hoops style 
+                    to make heads turn.`
+    let force = new nike_sale_products(force_url,"Nike Air Force 1 '07 Essential","Women's Shoes",6557,force_desc)
+
+    let miler_url = "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ab7fd318-7e87-4941-81ef-27683ecefab5/dri-fit-miler-wild-run-short-sleeve-printed-running-top-3PksHG.png"
+    let miler_desc = `Get inspiration for your daily route from the Nike Dri-FIT Miler Wild Run Top. A graphic 
+                        pushing you to "Keep the Lights On" is printed on the front. Lightweight and mobile, 
+                        it offers a soft feel for your journey.`
+    let miler = new nike_sale_products(miler_url,"Nike Dri-FIT Miler Wild Run","Men's Shirts",1597,miler_desc)
+
+    let fleece_url = "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9f3133a1-1eff-4cbc-9390-70f3f4ad4f75/air-mock-fleece-sjlNRG.png"
+    let fleece_desc = `The Nike Air Mock is a cropped fleece style that sits at your hips for a comfortable 
+                        feel and easy styling.Its roomy fit features a mock-neck design and curved blocking 
+                        inspired by movement.The blocking details and Air graphic are accented with a printed 
+                        outline.`
+    let fleece = new nike_sale_products(fleece_url,"Nike Air","Women's Shirts",3197,fleece_desc)
+
+    let black_tshirt_url = "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c3da821d-96ce-40e1-bbc6-d8d6dda375c7/sportswear-boyfriend-t-shirt-4S8Ffd.png"
+    let black_tshirt_desc = `The Nike Sportswear T-Shirt is made from soft cotton in a comfortable boyfriend 
+                            fit.Stacked graphics offer added texture and a trendy '90s look.This product is made 
+                            from at least 75% organic cotton fibres.`
+    let black_tshirt = new nike_sale_products(black_tshirt_url,"Nike Sportswear","Women's Shirts",1437,black_tshirt_desc)
+
+
+    let terry_url = "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6e04a75a-7c53-4f1c-abfd-46400627c648/sportswear-older-french-terry-pullover-hoodie-J1DPxS.png"
+    let terry_desc = `Colourful, comfy and classic—the Nike Sportswear Hoodie is the pullover you know and 
+                        love.The soft knit feel is lightweight and warm, making this a staple for anyone's 
+                        wardrobe.`
+    let terry = new nike_sale_products(terry_url,"Nike Sportswear","Kids Shirts",2637,terry_desc)
+
+    let short_url = "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/40833b3d-b747-4a59-9f55-ac70ee4a6d68/older-short-sleeve-football-top-qKnsBF.png"
+    let short_desc = `The Nike Top has a camo print on sweat-wicking fabric to help keep you dry when your 
+                        training heats up. This product is made from 100% recycled polyester fibres.`
+    let short = new nike_sale_products(short_url,"Nike Short sleeve","Kids Shirts",1197,short_desc)
+
+    let flyknit_url = "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ca5c50ec-79ac-4f36-824d-8d2c90b5ffe1/air-force-1-crater-flyknit-older-shoe-SVjXLc.png"
+    let flyknit_desc = `The Nike Air Force 1 Crater Flyknit updates classic b-ball style with at 
+                        least 20% recycled content by weight.Super-airy Flyknit material feels 
+                        breathable and stretchy around your foot.The speckled sole ups the 
+                        legendary comfy style that lets you give a little back with every step.`
+    let flyknit = new nike_sale_products(flyknit_url,"Nike Air Force 1 Crater Flyknit","Kids Shoes",5997,flyknit_desc)
+
+    let products = [lebron, Waffle,paris,tiempo,trophy,crator,sportwear,short,offcourt,terry,revolution,
+                    legend,legacy,jordan,academy,fleece, giannis,white_sportwear,flyknit,sunray,air,phantom,
+                    max90,clash,force,miler,black_tshirt]
     localStorage.setItem("sales_products",JSON.stringify(products))
 }
-
 
 export default setdata 
 

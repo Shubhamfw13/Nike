@@ -42,10 +42,10 @@ function footer()
          <P><b>India </b> Ⓒ2022 Nike,Inc. All Rights Reserved</P>
     </div>
     <div id = "footer_terms">
-        <p>Guides</p>
-        <p>Terms of Sale</p>
-        <p>Terms of Use</p>
-        <p>Nike Privacy Policy</p>
+    <a href=""><p>Guides</p></a>  
+    <a href="https://www.eshopworld.com/shoppers/help/terms-and-conditions-of-sale-en/"><p>Terms of Sale</p></a>  
+    <a href="https://agreementservice.svs.nike.com/in/en_gb/rest/agreement?agreementType=termsOfUse&uxId=com.nike&country=IN&language=en&requestType=redirect"><p>Terms of Use</p></a>  
+    <a href="https://agreementservice.svs.nike.com/sg/en_gb/rest/agreement?agreementType=privacyPolicy&uxId=com.nike.unite&country=SG&language=en&requestType=redirect"><p>Nike Privacy Policy</p></a>  
     </div>
     
 

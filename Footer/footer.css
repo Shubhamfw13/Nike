@@ -2,6 +2,7 @@
   height: 260px;
   background-color: black;
   color: white;
+  margin: 2% 0;
 }
 
 #customise_footer > div:first-child {
@@ -97,9 +98,18 @@
 #footer_terms {
   width: 35%;
   display: flex;
-  color: grey;
   font-size: 12px;
   justify-content: space-around;
+}
+
+#footer_terms > a {
+  text-decoration: none;
+  color: grey;
+}
+
+#footer_terms > a > p:hover {
+  color: white;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 376px) and (max-width: 768px) {
@@ -161,17 +171,21 @@
   }
 
   #footer_terms {
-    width: 40%;
+    width: 44%;
     display: flex;
     flex-wrap: wrap;
     font-size: 13px;
     justify-content: right;
     margin-top: 1%;
   }
+  #footer_terms > a {
+    margin-right: 6%;
+  }
 
-  #footer_terms > p {
-    margin-right: 8%;
+  #footer_terms > a > p {
+    margin-right: 0%;
     line-height: 2px;
+    letter-spacing: 1px;
   }
 }
 

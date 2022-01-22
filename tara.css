@@ -1,72 +1,201 @@
 #tara_image,
-#the_latest {
-  width: 94%;
+#alexa {
+  width: 95%;
   height: 600px;
   margin: auto;
 }
 
 #tara_image > img,
-#the_latest > img {
+#alexa > img {
   height: 100%;
   width: 100%;
 }
 
-#training_ess {
+#tara_image > p {
+  font-size: 22px;
+  margin-bottom: 1%;
+}
+
+#training_ess,
+#on_rise {
   width: 50%;
   text-align: center;
   height: 200px;
-  margin: 2% auto;
+  margin: 3% auto;
   margin-bottom: 6%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+#training_ess {
+  margin: 7% auto;
+}
+
 #training_ess > p:first-child {
-  font-size: 16px;
+  font-size: 17px;
 }
-#training_ess > p:nth-child(2) {
-  font-size: 43px;
+
+#training_ess > p:nth-child(2),
+#on_rise > p:first-child {
+  font-size: 49px;
   font-weight: bolder;
-  margin: -8px 0 0px 0px;
-  transform: scale(1.2);
+  margin: -10px 0 0px 0px;
+  transform: scale(1.5);
+  font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 
+#on_rise > p:nth-child(2),
 #training_ess > p:nth-child(3) {
-  font-size: 15px;
-  margin: 5% 0;
+  font-size: 16px;
+  margin: 4% 0;
 }
 
-#training_ess > div {
+#training_ess > div,
+#on_rise > div {
   display: flex;
   margin-left: 24%;
+  font-size: 16px;
 }
 
-#training_ess > div > button {
-  width: 210px;
-  height: 37px;
+#training_ess > div > button:nth-child(2),
+#on_rise > div > button:first-child {
+  width: 130px;
+  height: 40px;
   border-radius: 20px;
   border: none;
   color: white;
-  font-size: 15px;
+  margin: 0 8px;
   background-color: black;
 }
 #training_ess > div > button:hover,
-#training_ess > div > div:hover {
+#on_rise > div > button:hover {
   background-color: rgb(49, 49, 49);
 }
 
-#training_ess > div > div {
-  margin-left: 2%;
-  width: 120px;
-  height: 37px;
-  box-sizing: border-box;
-  background-color: black;
-  color: white;
-  font-size: 15px;
-  padding: 1.8%;
+#on_rise > div > button:nth-child(2) {
+  width: 180px;
+  height: 40px;
   border-radius: 20px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  background-color: black;
 }
 
-#the_latest > p {
-  font-size: 18px;
-  margin-bottom: 1%;
+#training_ess > div > button:first-child {
+  width: 230px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  background-color: black;
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+  #tara_image,
+  #alexa {
+    width: 98%;
+    height: 400px;
+  }
+
+  #training_ess,
+  #on_rise {
+    width: 60%;
+    height: 200px;
+    margin: 6% auto;
+    margin-bottom: 5%;
+  }
+
+  #training_ess {
+    margin-top: 11%;
+  }
+
+  #training_ess > p:first-child {
+    font-size: 17px;
+  }
+
+  #training_ess > p:nth-child(2),
+  #on_rise > p:first-child {
+    font-size: 34px;
+    transform: scale(1.5);
+  }
+
+  #on_rise > p:nth-child(2),
+  #training_ess > p:nth-child(3) {
+    font-size: 17px;
+  }
+
+  #training_ess > div,
+  #on_rise > div {
+    margin-left: 14%;
+  }
+}
+@media screen and (max-width: 375px) {
+  #tara_image,
+  #alexa {
+    width: 95%;
+    height: 200px;
+    margin: auto;
+  }
+
+  #tara_image {
+    margin-top: 20%;
+  }
+
+  #tara_image > p {
+    font-size: 20px;
+    margin-bottom: 1%;
+  }
+
+  #training_ess,
+  #on_rise {
+    width: 80%;
+    text-align: start;
+    height: 230px;
+    margin: 8% 3%;
+    margin-bottom: 6%;
+  }
+
+  #training_ess {
+    margin: 17% 3%;
+    height: 270px;
+  }
+
+  #training_ess > p:first-child {
+    font-size: 17px;
+  }
+
+  #training_ess > p:nth-child(2),
+  #on_rise > p:first-child {
+    font-size: 49px;
+    font-weight: bolder;
+    line-height: 45px;
+    margin: -10px 0 0px 0px;
+    transform: scale(1);
+  }
+
+  #training_ess > div,
+  #on_rise > div {
+    display: block;
+    margin-left: 0;
+    height: 100px;
+    font-size: 16px;
+  }
+
+  #training_ess > div > button:nth-child(2),
+  #on_rise > div > button:first-child {
+    width: 130px;
+    margin: 0;
+  }
+
+  #on_rise > div > button:nth-child(2) {
+    width: 180px;
+    font-size: 16px;
+    margin-top: 3%;
+  }
+
+  #training_ess > div > button:first-child,
+  #training_ess > div > button:nth-child(2) {
+    margin-top: 3%;
+  }
 }
