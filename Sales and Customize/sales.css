@@ -6,8 +6,11 @@ body {
   height: 50px;
   display: flex;
   justify-content: space-between;
-  margin: 0% 4% 2% 4%;
+  margin: 0% 3% 2% 3%;
   font-size: 20px;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 #sale_topbar > div {
@@ -47,8 +50,9 @@ body {
 }
 
 #sale_sorting_list {
-  margin-left: 84%;
-  position: absolute;
+  margin-left: 86%;
+  position: fixed;
+  top: 75px;
   font-size: 20px;
   height: 80px;
   transform: translateY(-20px);
@@ -76,7 +80,6 @@ body {
 }
 
 #sale_products > div {
-  /* height:450px; */
   box-shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 13%), 0 0.3px 0.9px 0 rgb(0 0 0 / 11%);
 }
 #image_box {

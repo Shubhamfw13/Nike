@@ -38,27 +38,28 @@
 </body>
 </html>
 <script type = "module">
-
+// Adding footer htmls 
     import footer from "/Footer/footer.js"
 
     let footer_styles = footer()
     document.querySelector("#customise_footer").innerHTML = footer_styles
+/////////////////////////------------------------------------------------///////////////////
 
-    let reg_data = JSON.parse(localStorage.getItem("reg_data"))
+    let reg_data = JSON.parse(localStorage.getItem("reg_data")) // getting registration data from local storage
 
-    document.querySelector("#sign_in").addEventListener("click",() =>
+    document.querySelector("#sign_in").addEventListener("click",() => // if clicked on Sign in button
     {
-        let email = document.querySelector("#email").value
-        let password = document.querySelector("#password").value
+        let email = document.querySelector("#email").value // getting entered email 
+        let password = document.querySelector("#password").value // getting entered password
 
-        if(email == reg_data.email && password == reg_data.password)
+        if(email == reg_data.email && password == reg_data.password) // checking if matches
         {
-            alert("Login Successfull")
+            alert("Login Successfull") // if matches alert message and next page
             window.location.href = "/tara.html"
         }
         else
         {
-            alert("Incorrect Email or Password")
+            alert("Incorrect Email or Password") // else alert to re enter 
         }
     })
 
