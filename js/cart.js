@@ -1,24 +1,54 @@
-var cart = [
-    {
-    prodcat:"Lifestyle",
-    proddes:"Created  for the hardwood but taken to the streets",
-    prodimg:"https://images.nike.com/is/image/DotCom/DH9719_100_A_PREM?align=0,1&cropN=0,0,0,0&resMode=sharp&bgc=f5f5f5&wid=150&fmt=jpg",
-    prodprice: 9295,
-    prodtitle: "Nike Dunk Low" 
-  },
-  {
-    prodcat:"Lifestyle",
-    proddes:"Created  for the hardwood but taken to the streets",
-    prodimg:"https://images.nike.com/is/image/DotCom/DH9719_100_A_PREM?align=0,1&cropN=0,0,0,0&resMode=sharp&bgc=f5f5f5&wid=150&fmt=jpg",
-    prodprice: 9295,
-    prodtitle: "Nike Dunk Low" 
-  },
-  {
-    prodcat:"Lifestyle",
-    proddes:"Created  for the hardwood but taken to the streets",
-    prodimg:"https://images.nike.com/is/image/DotCom/DH9719_100_A_PREM?align=0,1&cropN=0,0,0,0&resMode=sharp&bgc=f5f5f5&wid=150&fmt=jpg",
-    prodprice: 9295,
-    prodtitle: "Nike Dunk Low" 
-  }
-  ]
+var temparr =  JSON.parse(localStorage.getItem("cart"))||[]
+
+// console.log(temparr)
+
+// this function is for adding item in cart
+
+const displaycart = (temparr)=>{
+ temparr.map((elem,index)=>{
+  let cartdiv = document.createElement("div");
+  cartdiv.setAttribute("class","cart-items");
+
+  let imagediv = document.createElement("div");
+  let imag = document.createElement("img");
+  imag.src = elem.image;
+  imagediv.append(imag)
+
+  let detailsdiv = document.createElement("div")
+  let categ = document.createElement("p")
+  categ.innerHTML = elem.category
+  let remove = document.createElement("p")
+  remove.innerHTML = "Remove"
+  remove.setAttribute = ("class","remove-button")
+  detailsdiv.append(categ,remove)
+
+  remove.addEventListener("click", function(){
+    removeitem(index)
+  })
+
+  let pricediv = document.createElement("div")
+  let price = document.createElement("p")
+  price.innerHTML = elem.price;
+  pricediv.append(price)
+
+  cartdiv.append(imagediv,detailsdiv,pricediv)
+
+  document.getElementById("cart-div").append(cartdiv)
+
+ })
+
+}
+
+displaycart (temparr)
+
+// this function is for removing items from the cart
+function removeitem(index){
  
+  temparr.splice(index,1)
+  
+  localStorage.setItem("cart",JSON.stringify(temparr))
+  displaycart (temparr)
+  location.reload()
+  // displaycart (temparr)
+}
+
