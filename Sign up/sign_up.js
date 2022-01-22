@@ -40,7 +40,7 @@ document.querySelector("#join_us").addEventListener("click",(event) => // if cli
 
         localStorage.setItem("reg_data",JSON.stringify(reg_obj)) // setting items to local storage
 
-        window.location.href = "./sign_in.html"; // next page
+        window.location.href = "/Sign In/sign_in.html"; // next page
     }
 })
 
