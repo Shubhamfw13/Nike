@@ -6,8 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>In-Stock Products . Nike SNKRS IN</title>
     <link rel="stylesheet" href="./sneakersstyle/sneakers.css" />
+    <style>
+        @media only screen and (min-width : 376px) and (max-width : 768px){
+   #instock-main{
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: auto;
+   }
+   #instock-main>img{
+     width: 200px;
+     height: 200px;
+   }
+ }
+ /* media query for phones and small size screens */
+ @media only screen and (min-width : 0px) and (max-width : 375px){
+   #instock-main{
+     width: 95%;
+     margin: auto;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: auto;
+   }
+   #instock-main>img{
+     width: 200px;
+     height: 200px;
+   }
+ }
+    </style>
   </head>
   <body onload="inStock()">
+    <div class="top"></div>
     <div id="feed-header">
       <p onclick="FeedPage()">Feed</p>
       <p onclick="InStockPage()">In-Stock</p>
@@ -17,3 +43,8 @@
   </body>
 </html>
 <script src="js/sneakerdata.js"></script>
+
+<script type="module">
+  import navbar from "./components/navbar.js"
+  document.querySelector(".top").innerHTML=navbar()
+</script>

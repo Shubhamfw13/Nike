@@ -89,6 +89,85 @@ var data = [
     category: "SB Dunk Low Pro ",
     name: "Dark Russet",
   },
+];
+
+
+
+
+var data2 = [
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DA8016_806_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Women's Air Jordan 5 Low",
+    name:"Girls That Hoop"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DH2973_200_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Air Max Terrascape 90",
+    name:"Fuel Orange"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/555088_404_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Air Jordan 1",
+    name:"Dark Marina Blue"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/575441_404_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Air Jordan 1",
+    name:"Dark Marina Blue"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DQ8581_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Women's Dunk High",
+    name:"Vintage Black"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DQ8580_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Women's Dunk Low",
+    name:"Vintage Green"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DQ9324_600_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Women's Dunk Low ",
+    name:"Prime Pink"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DM1297_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Air More Uptempo '96",
+    name:"Trading Cards"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DH5348_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Dunk High",
+    name:"Light Chocolate"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DH0953_400_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Dunk High EMB",
+    name:"College Navy"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DO3806_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Older Kid's Dunk Low",
+    name:"Halloween"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DQ8580_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Women's Dunk Low",
+    name:"Vintage Green"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/DQ8581_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Women's Dunk High",
+    name:"Vintage Black"
+  },
+  {
+    image:"https://secure-images.nike.com/is/image/DotCom/555088_404_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+    category:"Air Jordan 1",
+    name:"Dark Marina Blue"
+  },
+]
+
+var data3 = [
   {
     image:
       "https://secure-images.nike.com/is/image/DotCom/CT8012_005_A_PREM?$SNKRS_COVER_WD$&align=0,1",
@@ -173,82 +252,6 @@ var data = [
     image:
       "https://secure-images.nike.com/is/image/DotCom/DC6083_500_A_PREM?$SNKRS_COVER_WD$&align=0,1",
   },
-];
-
-
-
-
-var data2 = [
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/DA8016_806_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Women's Air Jordan 5 Low",
-    name:"Girls That Hoop"
-  },
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/DH2973_200_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Air Max Terrascape 90",
-    name:"Fuel Orange"
-  },
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/555088_404_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Air Jordan 1",
-    name:"Dark Marina Blue"
-  },
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/575441_404_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Air Jordan 1",
-    name:"Dark Marina Blue"
-  },
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/DQ8581_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Women's Dunk High",
-    name:"Vintage Black"
-  },
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/DQ8580_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Women's Dunk Low",
-    name:"Vintage Green"
-  },
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/DQ9324_600_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Women's Dunk Low ",
-    name:"Prime Pink"
-  },
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/DM1297_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Air More Uptempo '96",
-    name:"Trading Cards"
-  },
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/DH5348_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Dunk High",
-    name:"Light Chocolate"
-  },
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/DH0953_400_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Dunk High EMB",
-    name:"College Navy"
-  },
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/DO3806_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Older Kid's Dunk Low",
-    name:"Halloween"
-  },
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/DQ8580_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Women's Dunk Low",
-    name:"Vintage Green"
-  },
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/DQ8581_100_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Women's Dunk High",
-    name:"Vintage Black"
-  },
-  {
-    image:"https://secure-images.nike.com/is/image/DotCom/555088_404_A_PREM?$SNKRS_COVER_WD$&align=0,1",
-    category:"Air Jordan 1",
-    name:"Dark Marina Blue"
-  },
 ]
 
 
@@ -256,43 +259,51 @@ var data2 = [
 
 
 const Feed = () => {
-  for (var i = 0; i < 15; i++) {
+  data.map((elem) => {
     let feeddiv = document.createElement("div");
     feeddiv.setAttribute("class", "feeddiv");
 
     let imag = document.createElement("img");
-    imag.src = data[i].image;
+    imag.src = elem.image;
 
     let categ = document.createElement("p");
-    categ.innerHTML = data[i].category;
+    categ.innerHTML = elem.category;
     categ.setAttribute("class","categ")
 
     let nam = document.createElement("p");
-    nam.innerHTML = data[i].name;
+    nam.innerHTML = elem.name;
     nam.setAttribute("class","nam")
 
-    nam.setAttribute("id","nm"+i)
+    nam.setAttribute("id","nm")
 
     let comingsoonbut = document.createElement("button")
     comingsoonbut.setAttribute("class","comingsoonbutton")
-    comingsoonbut.setAttribute("id","butt"+i)
+    comingsoonbut.setAttribute("id","butt")
     comingsoonbut.innerHTML = "Buy"
     
-    nam.addEventListener("mouseover",function(){
-      but()
+    // nam.addEventListener("mouseover",function(){
+    //   but()
+    // // })
+    comingsoonbut.addEventListener("click", function(){
+      addCart(elem)
+      // console.log(elem)
+      // addCart(image,category,name)
     })
 
+   
     feeddiv.append(imag, categ, nam,comingsoonbut);
 
     document.getElementById("feed-main").append(feeddiv);
     
-  }
- 
- 
+  })
+//  document.querySelector(".comingsoonbutton"),addEventListener("click",function(){
+//    addCart(elem)
+//  })
+
 };
 
 const inStock = () => {
-  data.map((elem) => {
+  data3.map((elem) => {
     let stockdiv = document.createElement("div");
     stockdiv.setAttribute("class", "stockdiv");
 
@@ -313,19 +324,19 @@ function but(){
 }
 
 const upcomingProd = () => {
-  for (var i = 0; i < 15; i++) {
+  data2.map((elem)=> {
     let feeddiv = document.createElement("div");
     feeddiv.setAttribute("class", "feeddiv");
 
     let imag = document.createElement("img");
-    imag.src = data2[i].image;
+    imag.src = elem.image;
 
     let categ = document.createElement("p");
-    categ.innerHTML = data2[i].category;
+    categ.innerHTML = elem.category;
     categ.setAttribute("class","categ")
 
     let nam = document.createElement("p");
-    nam.innerHTML = data2[i].name;
+    nam.innerHTML = elem.name;
     nam.setAttribute("class","nam")
 
     let comingsoonbut = document.createElement("button")
@@ -337,9 +348,33 @@ const upcomingProd = () => {
     document.getElementById("feed-main").append(feeddiv);
    
     
-  }
+  })
  
 };
+
+
+
+
+
+
+
+var addedToCart = []
+
+function addCart(elem){
+  // var obj = {
+  //   prodimg:image,
+  //   prodcat:category,
+  //   prodptitle:name,
+  // };
+
+  // console.log(obj)
+  addedToCart.push(elem);
+  localStorage.setItem("cart",JSON.stringify(addedToCart));
+  
+}
+
+
+
 
 
 
