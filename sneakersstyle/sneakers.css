@@ -27,7 +27,7 @@ width: 100%;
   width: 28%;
   border-radius: 15px;
   cursor: pointer;
-  /* display: none; */
+  display: none;
 }
 #instock-main{
     display: grid;

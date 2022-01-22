@@ -3,8 +3,12 @@ var temparr =  JSON.parse(localStorage.getItem("cart"))||[]
 // console.log(temparr)
 
 // this function is for adding item in cart
-
+let handling = 150;
 const displaycart = (temparr)=>{
+  let subtotal = 0;
+  
+  let grandtotal = 0;
+
  temparr.map((elem,index)=>{
   let cartdiv = document.createElement("div");
   cartdiv.setAttribute("class","cart-items");
@@ -25,19 +29,33 @@ const displaycart = (temparr)=>{
   remove.addEventListener("click", function(){
     removeitem(index)
   })
+ 
 
   let pricediv = document.createElement("div")
   let price = document.createElement("p")
   price.innerHTML = elem.price;
   pricediv.append(price)
 
+
+  grandtotal+= elem.price+handling
+  
+
+  grand(price,grandtotal)
+
   cartdiv.append(imagediv,detailsdiv,pricediv)
+  
 
   document.getElementById("cart-div").append(cartdiv)
 
  })
 
 }
+  const grand = (price,grandtotal) => {
+  console.log("grand",grandtotal) 
+  document.getElementById("subtotal").textContent = grandtotal-handling
+  document.getElementById("grandtotal").textContent = grandtotal  
+  }
+
 
 displaycart (temparr)
 

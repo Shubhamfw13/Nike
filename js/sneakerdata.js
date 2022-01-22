@@ -354,11 +354,8 @@ const upcomingProd = () => {
     nam.innerHTML = elem.name;
     nam.setAttribute("class","nam")
 
-    let comingsoonbut = document.createElement("button")
-    comingsoonbut.setAttribute("class","comingsoonbutton")
-    comingsoonbut.innerHTML = "Coming Soon"
 
-    feeddiv.append(imag, categ, nam,comingsoonbut);
+    feeddiv.append(imag, categ, nam);
 
     document.getElementById("feed-main").append(feeddiv);
    
