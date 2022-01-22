@@ -27,36 +27,36 @@ showdata(wishlist)
 function showdata(wishlist){
     var b = document.getElementById("men_wishlist_container");
 
-    wishlist.map(({productname,productimage,productcat,porddes,productprice})=>{
+    wishlist.map(({prodtitle,prodimg,porddes,prodprice})=>{
         var div = document.createElement("div");
 
         div.addEventListener("click",function(event){
             var obj = {
                 
-                      productimage:productimage,
-                      productname:productname,
-                      productcat:productcat,
+                      productimage:prodimg,
+                      productname:prodtitle,
+                    //   productcat:prodcat,
                       proddes:porddes,
-                      productprice:productprice
+                      productprice:prodprice
 
             };
 
             console.log(obj);
             localStorage.setItem("product",JSON.stringify(obj))
-            window.location.href = "productshowcase.html"
+            window.location.href = "productshow.html"
         });
         var image = document.createElement("img");
-        image.src = productimage;
+        image.src = prodimg;
         var name = document.createElement("p")
-        name.innerHTML = productname;
-        var category = document.createElement("p")
-        category.setAttribute("class","cat")
-        category.innerHTML = productcat;
+        name.innerHTML = prodtitle;
+        // var category = document.createElement("p")
+        // category.setAttribute("class","cat")
+        // category.innerHTML = prodcat;
         var price = document.createElement("p");
-        price.innerHTML= productprice;
+        price.innerHTML= prodprice;
         var space = document.createElement("br")
         
-        div.append(image,name,category,price);
+        div.append(image,name,price);
         b.append(div);
 
     })
