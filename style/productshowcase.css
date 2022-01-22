@@ -90,3 +90,19 @@
 .similar_product_image{
     height: 450px;
 }
+
+@media only screen and (min-width: 0px) and (max-width: 376px){
+    #Product_show_main_div{
+        width: 300%;
+        margin: auto;
+        display: flex;
+        border: 1px solid black;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+
+
+
+
+}
