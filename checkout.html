@@ -19,27 +19,103 @@
                 </div>
                 <input type="text" placeholder="Enter Address" id="useraddress">
                 <div id="checkout_email_phnnumber">
-                    <input type="email" placeholder="" id="useremail">
-                    <input type="number" placeholder="" id="userphnnum">
+                    <input type="email" placeholder="Email Id" id="useremail">
+                    <input type="number" placeholder="Phone Number" id="userphnnum">
                 </div>
                 <div id="checkout_add_details_button_div">
                     <button id="checkout_add_details_button" onclick="addDetails()">Save & Countinue</button>
                 </div>
             </div>
             <h1>2. PAYMENT</h1>
-            <div id="checkout_payment_div"></div>
+            <div id="checkout_payment_div">
+                <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="12" id="cardnumber" placeholder="Card Number">
+                <div>
+                    <h3 id="expirydateheading">Expiry Date</h3>
+                    <input type="month" id="cardexpirydate" min="1" max="10">
+                    <input type="number" placeholder="CVV" id=cardcvv"" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3">
+                </div>
+                <div id="payment_button_div"><button id="main_payment_button" onclick="makepayment()">Make Payment</button></div>
+            </div>
             <h1>3. ORDER REVIEW</h1>
-            <div id="checkout_order_status_div"></div>
+            <div id="checkout_order_status_div">
+                <div id="show_order_main_div">
+                    <h2>Name:- </h2>
+                    <p id="show_order_user_name"></p>
+                    <h2>Address:- </h2>
+                    <p id="show_order_user_address"></p>
+                    <h2>Total Amount:- </h2>
+                    <p id="show_order_user_total_amount"></p>
+                    <h2>Your Order has been placeholder</h2>
+                    <p id="you_will_recice_order_on"></p>
+                </div>
+                <div id="main_order_buttons_div"><button id="cancel_order" onclick="cancelorder()">Cancel Order</button><button id="countinue_shopping">Countinue Shopping</button></div>
+            </div>
         </div>
-        <div id="checkout_main_amount_div"></div>
+        <div id="checkout_main_amount_div">
+            <h1 id="">Total Amount</h1>
+            <div id="main_amount_show_div">
+                <div style="display: flex;">
+                    <h2>Amount:</h2>
+                    <h3 id="show_amount_to_pay"></h3>
+                </div>
+                <div style="display: flex;">
+                    <h2>GST tax (12%):</h2>
+                    <h3 id="show_tax_to_pay"></h3>
+                </div>
+                <div style="display: flex;">
+                    <h2>Total Amount:</h2>
+                    <h3 id="show_total_amount_to_pay"></h3>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
 
 <script>
-    addAdress();
+    var address = document.querySelector("#checkout_adress_div");
+    var payment = document.querySelector("#checkout_payment_div");
+    var order = document.querySelector("#checkout_order_status_div");
 
-    function addAdress(){
-        var body = document.createElement("#checkout_adress_div")
+    var userdata = JSON.parse(localStorage.getItem("user"));
+
+    var cart = JSON.parse(localStorage.getItem("cart"));
+
+    var amount = 0;
+    cart.forEach(({prodprice})=>{
+        amount += (+prodprice);
+    });
+
+    var tax = Math.floor((amount*12)/100);
+
+    var totalamount = amount+tax;
+
+    document.querySelector("#show_amount_to_pay").textContent = "₹ "+amount;
+
+    document.querySelector("#show_tax_to_pay").textContent = "₹ "+tax;
+    document.querySelector("#show_total_amount_to_pay").textContent = "₹ "+(tax+amount);
+
+    console.log("₹ "+amount);
+    console.log("tax "+Math.floor((amount*12)/100));
+    
+
+    function addDetails(){
+
+        address.style.display = "none";
+        payment.style.display = "block";
+    }
+
+    function makepayment(){
+        setTimeout(()=>{
+            payment.style.display = "none";
+            alert("Payment Recived...Order Placed.")
+            order.style.display = "block";
+        },3000);
+    }
+
+    function cancelorder(){
+        setTimeout(()=>{
+            alert("Our order is canceled. Countinue shoping");
+        }, 2000)
     }
 </script>
