@@ -82,4 +82,29 @@ hr{
     background-color: #F5F5F5;
 }
 
+@media screen and (min-width: 375px) and (max-width: 768px) {
+    
+    #search {
+      display: none;
+    }
+    .center{
+        display: none;
+    }
+    #bottom{
+        width: 100%;
+        display: flex;
+    }
+    #tight{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    
+
+}
+
 
