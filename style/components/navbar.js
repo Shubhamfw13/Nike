@@ -19,7 +19,7 @@ function navbar(){
          </div>
   
          <div class="center">
-          <p>Men</p>
+         <a id="men" href="men.html"><p>Men</p></a>
           <p>Women</p>
           <p>Kids</p>
           <p>Customize</p>
