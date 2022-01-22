@@ -19,4 +19,38 @@ img{
 body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+#shoes{
+    /* text-decoration: none !important; */
+    all: unset;
+}
+#men_cloth_container{
+    display: grid;
+    grid-template-columns: repeat(3,25%);
+    grid-gap: 3%;
+    /* border: 1px solid red; */
+    width: 100%;
+    margin-left: 10%;
+    margin-top: 3%;
+    
+}
+#men_cloth_container > div{
+    cursor: pointer;
+    /* border: 1px solid red; */
+    align-items: center;
+}
+#men_wishlist_container{
+    display: grid;
+    grid-template-columns: repeat(3,25%);
+    grid-gap: 3%;
+    /* border: 1px solid red; */
+    width: 100%;
+    margin-left: 10%;
+    margin-top: 3%;
+    
+}
+#men_wishlist_container > div{
+    cursor: pointer;
+    /* border: 1px solid red; */
+    align-items: center;
+}
 

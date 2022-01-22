@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/productshowcase.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
     <style>
         #Product_show_main_div{
             width: 80%;
@@ -15,11 +17,27 @@
     </style>
 </head>
 <body>
+    <div id="cont"></div>
     <div id="Product_show_main_div"></div>
 </body>
 </html>
 
-<script>
+<script type="module">
+
+import navbar from './style/components/navbar.js'
+    let cont = document.getElementById("cont")
+    cont.innerHTML = navbar()
+
+
+
+
+
+
+
+
+
+
+
     var product = JSON.parse(localStorage.getItem("product"));
  console.log(product)
     showProduct(product);
@@ -45,43 +63,42 @@
             cart.addEventListener("click", function(event){
                 event.preventDefault();
                 var obj = {
-                    prodtitle: prodname,
-                    prodcat: prodcat,
+                    prodtitle: productname,
+                    prodcat: productcat,
                     proddes: proddes,
-                    prodimg: prodimage,
-                    prodprice: prodprice,
+                    prodimg: productimage,
+                    productprice: productprice,
                 }
                 cart_data.push(obj);
                 localStorage.setItem("cart", JSON.stringify(cart_data));
+                console.log(obj)
             })
-
+           
         var wishlist = document.createElement("button");
             wishlist.textContent = "Favourite";
+            var wishlist_data = JSON.parse*(localStorage.getItem("wishlist"))
             wishlist.addEventListener("click", function(event){
                 event.preventDefault();
                 var obj = {
-                    prodtitle: prodname,
-                    prodcat: prodcat,
+                    productname: productname,
+                    productcat: productcat,
                     proddes: proddes,
-                    prodimg: prodimage,
-                    prodprice: prodprice,
+                    productimage: productimage,
+                    productprice: productprice,
                 }
                 wishlist_data.push(obj);
                 localStorage.setItem("wishlist", JSON.stringify(wishlist_data));
+                console.log(wishlist_data)
             })
 
         var br = document.createElement("br")
             
-
         var description = document.createElement("p");
             description.innerText = proddes;
-
         div.append(title, price, cart, br, wishlist, description);
-
         body.append(image, div);
     }
 
     var cart_data = JSON.parse*(localStorage.getItem("cart")) || [];
-
-    var wishlist_data = localStorage.getItem("wishlist");
+    var wishlist_data = JSON.parse*(localStorage.getItem("wishlist")) ;
 </script>

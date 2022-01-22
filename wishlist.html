@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Store.Favorites.</title>
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/menshoes.css">
+</head>
+<body>
+    <div id="cont"></div>
+    <div id="men_wishlist_container"></div>
+</body>
+</html>
+<script type="module">
+import navbar from './style/components/navbar.js'
+    let cont = document.getElementById("cont")
+    cont.innerHTML = navbar()
+
+    var wishlist = JSON.parse(localStorage.getItem("wishlist"));
+    console.log(wishlist)
+//     showdata(wishlist)
+showdata(wishlist)
+
+function showdata(wishlist){
+    var b = document.getElementById("men_wishlist_container");
+
+    wishlist.map(({productname,productimage,productcat,porddes,productprice})=>{
+        var div = document.createElement("div");
+
+        div.addEventListener("click",function(event){
+            var obj = {
+                
+                      productimage:productimage,
+                      productname:productname,
+                      productcat:productcat,
+                      proddes:porddes,
+                      productprice:productprice
+
+            };
+
+            console.log(obj);
+            localStorage.setItem("product",JSON.stringify(obj))
+            window.location.href = "productshowcase.html"
+        });
+        var image = document.createElement("img");
+        image.src = productimage;
+        var name = document.createElement("p")
+        name.innerHTML = productname;
+        var category = document.createElement("p")
+        category.setAttribute("class","cat")
+        category.innerHTML = productcat;
+        var price = document.createElement("p");
+        price.innerHTML= productprice;
+        var space = document.createElement("br")
+        
+        div.append(image,name,category,price);
+        b.append(div);
+
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     function showdata(wishlist){
+//     var b = document.getElementById("men_wishlist_container");
+
+//     wishlist.map(({prodtitle,prodimg,prodcat,porddes})=>{
+//         var div = document.createElement("div");
+
+//         div.addEventListener("click",function(event){
+//             var obj = {
+                
+//                       productimage:prodimg,
+//                       productname:prodtitle,
+//                       productcat:prodcat,
+//                       proddes:porddes,
+                      
+
+//             };
+
+
+
+//             console.log(obj);
+//             localStorage.setItem("product",JSON.stringify(obj))
+//             window.location.href = "productshowcase.html"
+//         });
+//         var image = document.createElement("img");
+//         image.src = prodimg;
+//         var name = document.createElement("p")
+//         name.innerHTML = prodtitle;
+//         var category = document.createElement("p")
+//         category.setAttribute("class","cat")
+//         category.innerHTML = prodcat;
+        
+//         var space = document.createElement("br")
+//         div.append(image,name,category,space);
+//         b.append(div);
+
+//     })
+// }
+
+
+</script>
