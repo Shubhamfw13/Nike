@@ -91,7 +91,7 @@
   background-color: black;
 }
 
-@media screen and (min-width: 376px) and (max-width: 768px) {
+@media screen and (min-width: 415px) and (max-width: 820px) {
   #tara_image,
   #alexa {
     width: 98%;
@@ -130,7 +130,7 @@
     margin-left: 14%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   #tara_image,
   #alexa {
     width: 95%;

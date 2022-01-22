@@ -112,7 +112,7 @@
   cursor: pointer;
 }
 
-@media screen and (min-width: 376px) and (max-width: 768px) {
+@media screen and (min-width: 415px) and (max-width: 820px) {
   #customise_footer {
     height: 380px;
   }
@@ -175,7 +175,7 @@
     display: flex;
     flex-wrap: wrap;
     font-size: 13px;
-    justify-content: right;
+    justify-content: start;
     margin-top: 1%;
   }
   #footer_terms > a {
@@ -189,7 +189,7 @@
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 375px) {
+@media screen and (min-width: 0px) and (max-width: 414px) {
   #customise_footer {
     height: 750px;
   }
