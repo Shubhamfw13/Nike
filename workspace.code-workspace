@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Nike",
+			"path": "."
+		},
+		{
+			"name": "nike",
+			"path": "E:\\nike"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Nike"
+	}
+}
