@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cart</title>
     <style>
       #cart-main {
         display: flex;
-        height: 300px;
+        height: 800px;
         /* border: 2px solid red; */
         width: 60%;
         margin: auto;
@@ -123,11 +123,11 @@
   </body>
 </html>
 <script>
-  var temparr =  JSON.parse(localStorage.getItem("cart"))
+  var temparr =  JSON.parse(localStorage.getItem("cart"))||[]
 
   // console.log(temparr)
  const displaycart = (temparr)=>{
-   temparr.map((elem)=>{
+   temparr.map((elem,index)=>{
     let cartdiv = document.createElement("div");
     cartdiv.setAttribute("class","cart-items");
 
@@ -139,19 +139,40 @@
     let detailsdiv = document.createElement("div")
     let categ = document.createElement("p")
     categ.innerHTML = elem.category
-    detailsdiv.append(categ)
+    let remove = document.createElement("p")
+    remove.innerHTML = "Remove"
+    remove.setAttribute = ("class","remove-button")
+    detailsdiv.append(categ,remove)
 
-    let namediv = document.createElement("div")
-    let nam = document.createElement("p")
-    nam.innerHTML = elem.name;
-    namediv.append(nam)
+    remove.addEventListener("click", function(){
+      removeitem(index)
+    })
 
-    cartdiv.append(imagediv,detailsdiv,namediv)
+    let pricediv = document.createElement("div")
+    let price = document.createElement("p")
+    price.innerHTML = elem.price;
+    pricediv.append(price)
+
+    cartdiv.append(imagediv,detailsdiv,pricediv)
 
     document.getElementById("cart-div").append(cartdiv)
 
    })
 
   }
+  
   displaycart (temparr)
+
+
+  function removeitem(index){
+   
+    temparr.splice(index,1)
+    
+    localStorage.setItem("cart",JSON.stringify(temparr))
+    displaycart (temparr)
+    location.reload()
+    // displaycart (temparr)
+  }
+
+
 </script>
