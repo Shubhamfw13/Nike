@@ -28,8 +28,9 @@
                 <option value="">High-low</option>
             </select>
         </div>
-        <div id="men_cloth_container"></div>
+       
     </div>
+    <div id="men_cloth_container"></div>
   
 </body>
 </html>
@@ -181,9 +182,9 @@ function showdata(data){
         category.setAttribute("class","cat")
         category.innerHTML = prodcat;
         var price = document.createElement("p");
-        price.innerHTML= prodprice;
+        price.innerHTML= "₹ "+prodprice;
         var space = document.createElement("br")
-        div.append(image,name,prodcat,space,prodprice);
+        div.append(image,name,category,price);
         b.append(div);
 
     })

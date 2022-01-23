@@ -186,7 +186,7 @@ showdata(data)
 
 function showdata(data){
     var b = document.getElementById("men_shoes_container");
-
+    b.innerHTML = null;
     data.map(({prodname,prodimage,prodcat,porddes,prodprice})=>{
         var div = document.createElement("div");
 
@@ -215,9 +215,9 @@ function showdata(data){
         category.setAttribute("class","cat")
         category.innerHTML = prodcat;
         var price = document.createElement("p");
-        price.innerHTML= prodprice;
+        price.innerHTML= "₹ "+ prodprice;
         var space = document.createElement("br")
-        div.append(image,name,prodcat,space,prodprice);
+        div.append(image,name,category,price);
         b.append(div);
 
     })
@@ -240,7 +240,7 @@ function fiter_data(){
 
     function sort_data(){
         var select = document.querySelector("#sort_women_shoe_clothing").value;
-
+  console.log(select)
         setTimeout( function(){
             if(select === "low"){
                 data.sort((a, b) => {
@@ -252,7 +252,6 @@ function fiter_data(){
                     return b.prodprice - a.prodprice;
                 })
             }
-
             showdata(data)
         }, 1000);
     }
