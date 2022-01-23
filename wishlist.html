@@ -11,6 +11,7 @@
 </head>
 <body>
     <div id="cont"></div>
+    <div><h2 style="text-align: center;">Your Favourite itmes will appear here</h2></div>
     <div id="men_wishlist_container"></div>
 </body>
 </html>
@@ -53,7 +54,7 @@ function showdata(wishlist){
         // category.setAttribute("class","cat")
         // category.innerHTML = prodcat;
         var price = document.createElement("p");
-        price.innerHTML= prodprice;
+        price.innerHTML= "₹ "+prodprice;
         var space = document.createElement("br")
         
         div.append(image,name,price);
