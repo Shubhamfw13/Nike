@@ -1,4 +1,4 @@
-var temparr =  JSON.parse(localStorage.getItem("cart"))||[]
+
 
 // console.log(temparr)
 
@@ -8,8 +8,9 @@ const displaycart = (temparr)=>{
   let subtotal = 0;
   
   let grandtotal = 0;
-
+  document.getElementById("cart-div").innerHTML = null;
  temparr.map((elem,index)=>{
+  
   let cartdiv = document.createElement("div");
   cartdiv.setAttribute("class","cart-items");
 
@@ -21,13 +22,13 @@ const displaycart = (temparr)=>{
   let detailsdiv = document.createElement("div")
   let categ = document.createElement("p")
   categ.innerHTML = elem.category
-  let remove = document.createElement("p")
+  let remove = document.createElement("button")
   remove.innerHTML = "Remove"
   remove.setAttribute = ("class","remove-button")
   detailsdiv.append(categ,remove)
 
   remove.addEventListener("click", function(){
-    removeitem(index)
+    removeitem(index);
   })
  
 
@@ -40,7 +41,7 @@ const displaycart = (temparr)=>{
   grandtotal+= elem.price+handling
   
 
-  grand(price,grandtotal)
+  grand(grandtotal)
 
   cartdiv.append(imagediv,detailsdiv,pricediv)
   
@@ -50,23 +51,21 @@ const displaycart = (temparr)=>{
  })
 
 }
-  const grand = (price,grandtotal) => {
+  const grand = (grandtotal) => {
   console.log("grand",grandtotal) 
   document.getElementById("subtotal").textContent = grandtotal-handling
   document.getElementById("grandtotal").textContent = grandtotal  
   }
 
-
+  var temparr =  JSON.parse(localStorage.getItem("cart"))||[]
 displaycart (temparr)
 
 // this function is for removing items from the cart
 function removeitem(index){
  
   temparr.splice(index,1)
-  
-  localStorage.setItem("cart",JSON.stringify(temparr))
   displaycart (temparr)
-  location.reload()
-  // displaycart (temparr)
+  localStorage.setItem("cart",JSON.stringify(temparr))
+
 }
 
