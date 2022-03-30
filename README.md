@@ -1,13 +1,17 @@
-Hello
-This Clone of official website nike.com.
-Our team members are:- Deepanshu Gulia, Faruk Khan, Suraj Pathak, Shubham Kumar, Anand S Holla, Jayasmita (Couldn't able to work on site due to Covid).
+Clone of Nike.com
+Hello! This is a clone of official website nike.com. we made this clone with use of HTML, CSS, Javascript. Nike is very famous brand which makes sports product and sports essentials.
 
-Deployed Link :- https://nikemasaischoolclone.netlify.app/
+Team Members :- Deepanshu Gulia, Faruk Khan, Suraj Pathak, Shubham Kumar, Anand S Holla.
 
-In our website we used:
-HTML,
-CSS,
-Javascript,
-Media Query
-ES6 (advanse js),
-Import and export (advance js),
+Steps to run our Website:- Just click on our deploy link to run our website
+
+Deploy link:- https://nikemasaischoolclone.netlify.app/
+
+
+Languages and Tools:
+css3 html5 javascript nodejs
+
+Scrennshots :-
+
+
+
